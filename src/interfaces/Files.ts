@@ -3,8 +3,9 @@ export interface MidiFile {
     title: string;
     price: number;
     description?: string;
-    previewUrl?: string;
-    fileUrl: string;
+    midiFileUrl: string;      
+    previewAudioUrl: string;  
+    imageUrl?: string;       
     createdAt: Date;
     tags?: string[];
     bpm?: number;
