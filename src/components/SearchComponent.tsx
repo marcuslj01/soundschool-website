@@ -32,12 +32,23 @@ const SearchComponent = () => {
           transition={{ delay: 0.4, duration: 0.5 }}
           className="relative w-full max-w-xs lg:max-w-md mx-auto"
         >
+          <motion.div
+            className="absolute inset-0 rounded-lg lg:rounded-xl bg-gradient-to-r from-pink-500 to-blue-500 opacity-50"
+            animate={{
+              opacity: [0.3, 0.15, 0.3],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+          />
           <input
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search our MIDI-files"
-            className="w-full px-4 lg:px-5 py-2.5 lg:py-3 pl-10 lg:pl-12 rounded-lg lg:rounded-xl 
+            className="relative w-full px-4 lg:px-5 py-2.5 lg:py-3 pl-10 lg:pl-12 rounded-lg lg:rounded-xl 
                      bg-white/10 backdrop-blur-sm border border-white/20 
                      text-white placeholder-white/70 text-sm lg:text-base
                      focus:outline-none focus:ring-2 focus:ring-white/30"
